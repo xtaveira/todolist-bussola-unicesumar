@@ -8,6 +8,7 @@ const routes = Router();
 // TAREFAS
 
 routes.post("/task", TaskController.create);
+routes.get("/tasks", TaskController.findTasks);
 routes.get("/task/:id", TaskController.findById);
 routes.get("/usertask/:userId", TaskController.findByUserId);
 routes.put("/uptask/:id", TaskController.updateTask);
@@ -30,6 +31,6 @@ routes.delete("/delcategory/:id", CategoryController.deleteCategory);
 
 //FUNCIONALIDADES ADICIONAIS
 
-routes.post("/task/category", TaskController.getTaskByCategory);
+routes.get("/tasksbycategory/:idCategory", TaskController.getTaskByCategory);
 
 export { routes };

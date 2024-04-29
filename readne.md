@@ -1,4 +1,3 @@
-
 Utilizando o template para uma API Rest fornecido em <https://github.com/TI-UNICESUMAR/2024-programacao-III-ADSIS5S/tree/main/11-03-2024>
 Desenvolva um aplicativo para gerenciamento de tarefas.
 
@@ -43,7 +42,7 @@ Categorias:
 
 Funcionalidades Adicionais utilizando Métodos de Array:
 
-[] - Rota para filtrar tarefas por categoria.
+[x] - Rota para filtrar tarefas por categoria.
 [] - Rota para listar tarefas concluídas.
 [] - Rota para listar tarefas pendentes.
 [] - Rota para listar tarefas que vencem em um determinado período.
@@ -57,4 +56,4 @@ Funcionalidades com Métodos de Array:
 [] - Rota para encontrar a tarefa com a descrição mais longa.
 
 Observação:
-Estas rotas podem ser implementadas utilizando os métodos .map, .filter, .resume, .some e outros métodos de manipulação  de array para alcançar as funcionalidades desejadas, agregando complexidade média a difícil ao projeto.
+Estas rotas podem ser implementadas utilizando os métodos .map, .filter, .resume, .some e outros métodos de manipulação de array para alcançar as funcionalidades desejadas, agregando complexidade média a difícil ao projeto.
