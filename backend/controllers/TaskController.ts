@@ -42,6 +42,11 @@ class TaskController {
     const tasksByCategory = await TaskService.getTasksByCategory(idCategory);
     return res.json(tasksByCategory);
   }
+
+  async tasksConcluidas(req: Request, res: Response) {
+    const concluidas = await TaskService.tasksConcluidas();
+    return concluidas;
+  }
 }
 
 export default new TaskController();

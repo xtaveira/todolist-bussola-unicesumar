@@ -46,6 +46,16 @@ export class TaskService {
 
     return tasksByCategory;
   }
+
+  async tasksConcluidas() {
+    const tasks = await TaskModel.find();
+
+    const concluidas = tasks.filter((task) => {
+      console.log(task);
+      return task.status == "Concluida";
+    });
+    return concluidas;
+  }
 }
 
 export default new TaskService();

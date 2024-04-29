@@ -32,5 +32,6 @@ routes.delete("/delcategory/:id", CategoryController.deleteCategory);
 //FUNCIONALIDADES ADICIONAIS
 
 routes.get("/tasksbycategory/:idCategory", TaskController.getTaskByCategory);
+routes.get("/tasksconcluidas", TaskController.tasksConcluidas);
 
 export { routes };
