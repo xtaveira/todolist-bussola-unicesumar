@@ -57,6 +57,11 @@ class TaskController {
     const task = await TaskService.taskMaisRecente(req.body.userId);
     return task;
   }
+
+  async taskMaiorDescricao(req: Request, res: Response) {
+    const task = await TaskService.taskComMaiorDescricao();
+    return task;
+  }
 }
 
 export default new TaskController();
