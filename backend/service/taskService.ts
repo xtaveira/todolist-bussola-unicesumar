@@ -66,6 +66,23 @@ export class TaskService {
     });
     return concluidas;
   }
+
+  async taskMaisRecente(userId: any) {
+    const tasks = await TaskModel.find();
+    const tasksByUser = tasks.filter((task) => {
+      if (task.userId != null && task.userId != undefined) {
+        return task.userId.toString() === userId;
+      }
+    });
+
+    tasksByUser.sort((task1, task2) => {
+      return (
+        new Date(task1.createdAt).getTime() -
+        new Date(task2.createdAt).getTime()
+      );
+    });
+    return tasksByUser[0];
+  }
 }
 
 export default new TaskService();

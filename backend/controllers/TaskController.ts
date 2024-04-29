@@ -52,6 +52,11 @@ class TaskController {
     const pendentes = await TaskService.tasksPendentes();
     return pendentes;
   }
+
+  async taskRecente(req: Request, res: Response) {
+    const task = await TaskService.taskMaisRecente(req.body.userId);
+    return task;
+  }
 }
 
 export default new TaskController();
