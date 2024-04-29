@@ -66,6 +66,18 @@ export class TaskService {
     });
     return concluidas;
   }
+
+    async sumUserTask(userId: any) {
+
+    const tasks = await TaskModel.find({
+      userId,
+    });
+    const totalTask = tasks.length;
+
+    return totalTask;
+  }
+
+
 }
 
 export default new TaskService();

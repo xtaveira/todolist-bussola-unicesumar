@@ -52,6 +52,13 @@ class TaskController {
     const pendentes = await TaskService.tasksPendentes();
     return pendentes;
   }
+
+  async sumUserTasks(req: Request, res: Response){
+    const ids = req.params.userId
+    const taskLen = await TaskService.sumUserTask(ids)
+
+    res.json({taskLen})
+  }
 }
 
 export default new TaskController();
