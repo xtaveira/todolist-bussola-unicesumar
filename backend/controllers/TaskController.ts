@@ -47,6 +47,11 @@ class TaskController {
     const concluidas = await TaskService.tasksConcluidas();
     return concluidas;
   }
+
+  async tasksPendentes(req: Request, res: Response) {
+    const pendentes = await TaskService.tasksPendentes();
+    return pendentes;
+  }
 }
 
 export default new TaskController();

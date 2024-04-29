@@ -56,6 +56,16 @@ export class TaskService {
     });
     return concluidas;
   }
+
+  async tasksPendentes() {
+    const tasks = await TaskModel.find();
+
+    const concluidas = tasks.filter((task) => {
+      console.log(task);
+      return task.status == "Pendentes";
+    });
+    return concluidas;
+  }
 }
 
 export default new TaskService();

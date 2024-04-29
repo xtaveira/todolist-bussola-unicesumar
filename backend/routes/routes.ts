@@ -33,5 +33,6 @@ routes.delete("/delcategory/:id", CategoryController.deleteCategory);
 
 routes.get("/tasksbycategory/:idCategory", TaskController.getTaskByCategory);
 routes.get("/tasksconcluidas", TaskController.tasksConcluidas);
+routes.get("/taskspendentes", TaskController.tasksPendentes);
 
 export { routes };

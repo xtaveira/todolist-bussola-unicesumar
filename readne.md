@@ -43,8 +43,8 @@ Categorias:
 Funcionalidades Adicionais utilizando Métodos de Array:
 
 [x] - Rota para filtrar tarefas por categoria.
-[] - Rota para listar tarefas concluídas.
-[] - Rota para listar tarefas pendentes.
+[x] - Rota para listar tarefas concluídas.
+[x] - Rota para listar tarefas pendentes.
 [] - Rota para listar tarefas que vencem em um determinado período.
 [] - Rota para contar o número total de tarefas de um usuário.
 [] - Rota para encontrar a tarefa mais recente de um usuário.
