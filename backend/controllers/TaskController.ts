@@ -53,6 +53,12 @@ class TaskController {
     return pendentes;
   }
 
+  async sumUserTasks(req: Request, res: Response){
+    const ids = req.params.userId
+    const taskLen = await TaskService.sumUserTask(ids)
+
+    res.json({taskLen})
+      
   async taskRecente(req: Request, res: Response) {
     const task = await TaskService.taskMaisRecente(req.body.userId);
     return task;
