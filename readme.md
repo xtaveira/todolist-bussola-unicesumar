@@ -1,3 +1,6 @@
+Carlos Eduardo RA:221881102
+Davi Taveira RA: 221914332
+
 Utilizando o template para uma API Rest fornecido em <https://github.com/TI-UNICESUMAR/2024-programacao-III-ADSIS5S/tree/main/11-03-2024>
 Desenvolva um aplicativo para gerenciamento de tarefas.
 
@@ -53,7 +56,7 @@ Funcionalidades com Métodos de Array:
 
 [] - Rota para encontrar a tarefa mais antiga de um usuário.
 [] - conclusão das tarefas.
-[] - Rota para encontrar a tarefa com a descrição mais longa.
+[X] - Rota para encontrar a tarefa com a descrição mais longa.
 
 Observação:
 Estas rotas podem ser implementadas utilizando os métodos .map, .filter, .resume, .some e outros métodos de manipulação de array para alcançar as funcionalidades desejadas, agregando complexidade média a difícil ao projeto.
