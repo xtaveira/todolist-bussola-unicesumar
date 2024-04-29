@@ -47,7 +47,7 @@ Funcionalidades Adicionais utilizando Métodos de Array:
 [x] - Rota para listar tarefas pendentes.
 [] - Rota para listar tarefas que vencem em um determinado período.
 [] - Rota para contar o número total de tarefas de um usuário.
-[] - Rota para encontrar a tarefa mais recente de um usuário.
+[x] - Rota para encontrar a tarefa mais recente de um usuário.
 
 Funcionalidades com Métodos de Array:
 

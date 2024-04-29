@@ -78,6 +78,41 @@ export class TaskService {
   }
 
 
+  async taskMaisRecente(userId: any) {
+    const tasks = await TaskModel.find();
+    const tasksByUser = tasks.filter((task) => {
+      if (task.userId != null && task.userId != undefined) {
+        return task.userId.toString() === userId;
+      }
+    });
+
+    tasksByUser.sort((task1, task2) => {
+      return (
+        new Date(task1.createdAt).getTime() -
+        new Date(task2.createdAt).getTime()
+      );
+    });
+    return tasksByUser[0];
+  }
+
+  async taskComMaiorDescricao() {
+    const tasks = await TaskModel.find();
+
+    const maiorDescricao = tasks.reduce((maiorDescricao: any, task: any) => {
+      // Verifica se maiorDescricao é undefined ou se a descrição da tarefa é maior
+      if (
+        !maiorDescricao ||
+        (task.descricao &&
+          task.descricao.length > maiorDescricao.descricao.length)
+      ) {
+        return task;
+      } else {
+        return maiorDescricao;
+      }
+    }, tasks[0]);
+
+    return maiorDescricao;
+  }
 }
 
 export default new TaskService();
